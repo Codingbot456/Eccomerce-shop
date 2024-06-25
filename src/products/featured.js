@@ -12,30 +12,30 @@ import onSellImage4 from '../components/assets/images/feature-5.webp';
 const initialProducts = [
     {
         id: 1,
-        name: 'Product 1',
-        description: 'Description for Product 1',
-        price: 29.99,
+        name: 'Nike Bag',
+        description: 'Rolex’s powerhouse calibre 3235 Perpetual movement. An upgrade from the calibre 3135 movement',
+        price: 16.38,
         image_url: onSellImage
     },
     {
         id: 2,
-        name: 'Product 2',
-        description: 'Description for Product 2',
-        price: 39.99,
+        name: 'Adidas Woolen Cap',
+        description: 'Casual wear (casual attire or clothing) may be a Western code that’s relaxed, occasional, spontaneous and fitted to everyday use. Casual wear became popular within the Western world following the counterculture of the 1960s.',
+        price: 16.00,
         image_url: onSellImage1
     },
     {
         id: 3,
-        name: 'Product 3',
-        description: 'Description for Product 3',
-        price: 49.99,
+        name: 'Nike Leader VT',
+        description: 'Footwear refers to garments worn on the feet, which originally serves to purpose of protection against adversities of the environment, usually regarding ground textures and temperature.',
+        price: 16.38,
         image_url: onSellImage2
     },
     {
         id: 4,
-        name: 'Product 2',
-        description: 'Description for Product 2',
-        price: 39.99,
+        name: 'Tissot Classic',
+        description: 'The new-model Submariner now features Rolex’s powerhouse calibre 3235 Perpetual movement. An upgrade from the calibre 3135 movement,',
+        price: 600.00,
         image_url: onSellImage4
     }
 ];
@@ -88,7 +88,7 @@ const ProductCard = ({ product, addToCart, setSelectedProduct }) => {
                     </div>
                     <div className='card-info4'>
                         <h5>{product.name}</h5>
-                        <p>{product.description}</p>
+                        <p2>{product.description}</p2>
                         <h6>Price: ${product.price}</h6>
                     </div>
                 </div>
@@ -134,9 +134,9 @@ const CartBuy = ({ product, onClose, onAddToCart }) => {
             </div>
             <div className='cart-buy-abt2'>
                 <div className='card-info'>
-                    <h4>{product.name}</h4>
-                    <p>{product.description}</p>
-                    <h5>Price: ${product.price}</h5>
+                <h4>{product.name}</h4>
+                        <p1>{product.description}</p1>
+                        <h5>Price: ${product.price}</h5>
                 </div>
                 <div className='sizes'>
                     {['S', 'M', 'L', 'XL', 'XXL'].map(size => (

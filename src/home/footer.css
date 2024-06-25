@@ -11,10 +11,17 @@
  
 
 }
+.Main-footer h4{
+  font-size: 1.5em;
+  flex-wrap: nowrap;
+}
+.footer-container{
+  margin-top: 40px;
+}
 .sub-footer{
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items:center;
   gap:40px;
   padding: 10px;
@@ -54,6 +61,8 @@ aspect-ratio: 1/1;
   display: grid;
   text-align: left;
 }
+
+
 .social a,
 .contact a,
 .categories a,
@@ -64,6 +73,7 @@ aspect-ratio: 1/1;
   margin-bottom: 10px;
   text-decoration: none;
   color:whitesmoke;
+  font-size: 16px;
   
 }
 

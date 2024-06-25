@@ -9,67 +9,67 @@ import onSellImage2 from '../components/assets/images/new-Arriv3.webp';
 import onSellImage3 from '../components/assets/images/new-Arriv4.webp';
 import onSellImage4 from '../components/assets/images/new-Arriv5.webp';
 import onSellImage5 from '../components/assets/images/new-Arriv6.webp';
-import onSellImage6 from '../components/assets/images/new-Arriv7.webp';
-import onSellImage7 from '../components/assets/images/new-Arriv8.webp';
-import onSellImage8 from '../components/assets/images/new-Arriv.webp';
+import onSellImage6 from '../components/assets/images/on-sell7.webp';
+import onSellImage7 from '../components/assets/images/on-sell8.webp';
+import onSellImage8 from '../components/assets/images/on-sell9.webp';
 
 const initialProducts = [
     {
         id: 1,
-        name: 'Product 1',
-        description: 'Description for Product 1',
-        price: 29.99,
+        name: 'Roadster Women Round Neck',
+        description: 'Fendi began life in 1925 as a fur and leather speciality store in Rome.',
+        price: 18.99,
         image_url: onSellImage
     },
     {
         id: 2,
-        name: 'Product 2',
-        description: 'Description for Product 2',
+        name: 'Roadster Women Round Neck',
+        description: 'Fendi began life in 1925 as a fur and leather speciality store in Rome.',
         price: 39.99,
         image_url: onSellImage1
     },
     {
         id: 3,
-        name: 'Product 3',
-        description: 'Description for Product 3',
+        name: 'Roadster Women Round Neck',
+        description: 'Fendi began life in 1925 as a fur and leather speciality store in Rome.Description for Product 3',
         price: 49.99,
         image_url: onSellImage2
     },
     {
         id: 4,
-        name: 'Product 2',
-        description: 'Description for Product 2',
+        name: 'Roadster Women Round Neck',
+        description: 'Fendi began life in 1925 as a fur and leather speciality store in Rome.',
         price: 39.99,
         image_url: onSellImage4
     },
     {
         id: 5,
-        name: 'Product 2',
-        description: 'Description for Product 2',
+        name: 'Roadster Women Round Neck',
+        description: 'Fendi began life in 1925 as a fur and leather speciality store in Rome.',
         price: 39.99,
         image_url: onSellImage5
     },{
         id: 6,
-        name: 'Product 2',
-        description: 'Description for Product 2',
+        name: 'Roadster Women Round Neck',
+        description: 'Fendi began life in 1925 as a fur and leather speciality store in Rome.',
         price: 39.99,
         image_url:onSellImage6
     },{
         id: 7,
-        name: 'Product 2',
-        description: 'Description for Product 2',
+        name: 'Roadster Women Round Neck',
+        description: 'Fendi began life in 1925 as a fur and leather speciality store in Rome.',
         price: 39.99,
         image_url:onSellImage7
     },{
         id: 8,
-        name: 'Product 2',
-        description: 'Description for Product 2',
+        name: 'Roadster Women Round Neck',
+        description: 'Fendi began life in 1925 as a fur and leather speciality store in Rome.',
         price: 39.99,
         image_url:onSellImage8
     },{
         id: 9,
-        name: 'Product 2',
-        description: 'Description for Product 2',
+        name: 'Roadster Women Round Neck',
+        description: 'Fendi began life in 1925 as a fur and leather speciality store in Rome.',
         price: 39.99,
         image_url: onSellImage3
     },
@@ -84,7 +84,7 @@ function FeaturedProducts() {
 
     return (
         <div className={`home-prods4 ${selectedProduct ? 'dimmed' : ''}`}>
-            <h2>Our Featured Clothes</h2>
+            <h2>New-Arrival Clothes</h2>
             <div className="item-content4">
                 {products && products.length && products.map((product, index) => (
                     <ProductCard
@@ -122,7 +122,7 @@ const ProductCard = ({ product, addToCart, setSelectedProduct }) => {
                     </div>
                     <div className='card-info4'>
                         <h5>{product.name}</h5>
-                        <p>{product.description}</p>
+                        <p2>{product.description}</p2>
                         <h6>Price: ${product.price}</h6>
                     </div>
                 </div>
@@ -168,9 +168,9 @@ const CartBuy = ({ product, onClose, onAddToCart }) => {
             </div>
             <div className='cart-buy-abt2'>
                 <div className='card-info'>
-                    <h4>{product.name}</h4>
-                    <p>{product.description}</p>
-                    <h5>Price: ${product.price}</h5>
+                <h4>{product.name}</h4>
+                        <p1>{product.description}</p1>
+                        <h5>Price: ${product.price}</h5>
                 </div>
                 <div className='sizes'>
                     {['S', 'M', 'L', 'XL', 'XXL'].map(size => (
@@ -200,5 +200,4 @@ const CartBuy = ({ product, onClose, onAddToCart }) => {
         </div>
     );
 };
-
 export default FeaturedProducts;
