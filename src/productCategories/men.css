@@ -21,15 +21,6 @@ flex-wrap: wrap;
     word-spacing: 1px;
 }
 
-.add-to-cart {
-    background-color: #ff6f61;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 10px 0;
-    cursor: pointer;
-    border-radius: 5px;
-}
 
 
 .size-btn {
@@ -77,6 +68,9 @@ color: white;
 .view-details{
     background-color: black;
     color: white;
+    width: 100%;
+    justify-self: center;
+   
 
 }
 

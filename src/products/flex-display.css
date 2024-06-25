@@ -41,6 +41,7 @@
     display: grid;
     place-content: center;
     gap: 10px;
+   
 }
 
 
@@ -60,7 +61,6 @@
     margin:0;
     height: 100%;
     border-radius: 10px 0 0 10px;
-
 }
 
 @media (max-width: 768px) {
@@ -89,6 +89,8 @@
     .overlay .buy-card-main{
         display: grid;
         place-content: center;
+        width: 100%;
+        overflow-x: hidden;
         gap:0;
     }
     .overlay .buy-card-main .card-image-main{
@@ -116,8 +118,8 @@
     display:flex;
     justify-content:space-between;
     overflow-y: scroll;
-    flex-wrap: wrap;
-    gap: 80px;
+    flex-wrap: nowrap;
+    gap: 250px;
     background: #fff;
     padding: 20px;
     border-radius: 10px;
@@ -165,4 +167,18 @@
 .close-button1:hover{
     background-color: white;
     color: black;
+}
+.quantity .ccart .add-to-cart {
+    padding: 10px 20px;
+    border: none;
+    background: blue;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+
+
+.quantity .ccart .add-to-cart:hover {
+    background: #333;
 }

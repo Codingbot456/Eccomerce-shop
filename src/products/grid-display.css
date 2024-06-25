@@ -92,11 +92,7 @@
     flex-direction: column;
 
 }
-.view-details{
-    justify-self: center;
-    width: 100%;
-    background-color: red;
-}
+
 
 @media (max-width: 768px) {
     .home-prods4 {
@@ -131,6 +127,22 @@
         gap: 30px;
         }
       
+        .overlay .cart-buy-abt2{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+         }
+      .cart-buy-abt2 .card-wrap{
+            width: 300px;
+             height: auto;
+             padding: 10px;
+         
+         }
+         
+     
+        .cart-buy-abt2 .color-picker{
+             display: flex;
+         }
 
     
     .card-info4 p1, p2, p3 {
@@ -257,7 +269,7 @@
 }
 
 .quantity {
-    display: grid;
+    display: flex;
     align-items: center;
     gap: 10px;
 }
@@ -280,17 +292,28 @@
     background: #fff;
 }
 
-.add-to-cart {
+.buy-card-main .card-image-main{
+    height: 100%;
+   width: auto;
+}
+
+.quantity .ccart .add-to-cart {
     padding: 10px 20px;
     border: none;
-    background: #000;
+    background: blue;
     color: #fff;
     cursor: pointer;
     transition: background 0.3s;
 }
 
-.add-to-cart:hover {
+
+
+.quantity .ccart .add-to-cart:hover {
     background: #333;
+}
+.cart-buy-abt2 .card-wrap{
+    display: grid;
+    gap: 20px;
 }
 
 

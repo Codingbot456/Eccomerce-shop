@@ -158,13 +158,15 @@ const CartBuy = ({ product, onClose, onAddToCart }) => {
                         <button onClick={handleDecrement} className='quantity-btn'>-</button>
                         <span className='quantity-value'>{quantity}</span>
                         <button onClick={handleIncrement} className='quantity-btn'>+</button>
+                        <div className='ccart'>
+                        <button onClick={handleAddToCartClick} className='add-to-cart'>Add to Cart</button>
+                        </div>
+                        
                     </div>
-                    <button onClick={handleAddToCartClick} className='add-to-cart'>Add to Cart</button>
                 </div>
                 <button className='view-details'>View Details</button>
             </div>
         </div>
     );
 };
-
 export default FeaturedProducts;

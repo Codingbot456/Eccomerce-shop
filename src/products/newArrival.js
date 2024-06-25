@@ -9,9 +9,9 @@ import onSellImage2 from '../components/assets/images/new-Arriv3.webp';
 import onSellImage3 from '../components/assets/images/new-Arriv4.webp';
 import onSellImage4 from '../components/assets/images/new-Arriv5.webp';
 import onSellImage5 from '../components/assets/images/new-Arriv6.webp';
-import onSellImage6 from '../components/assets/images/on-sell7.webp';
-import onSellImage7 from '../components/assets/images/on-sell8.webp';
-import onSellImage8 from '../components/assets/images/on-sell9.webp';
+import onSellImage6 from '../components/assets/images/new-Arriv7.webp';
+import onSellImage7 from '../components/assets/images/new-Arriv8.webp';
+import onSellImage8 from '../components/assets/images/new-Arriv9.webp';
 
 const initialProducts = [
     {
@@ -192,8 +192,11 @@ const CartBuy = ({ product, onClose, onAddToCart }) => {
                         <button onClick={handleDecrement} className='quantity-btn'>-</button>
                         <span className='quantity-value'>{quantity}</span>
                         <button onClick={handleIncrement} className='quantity-btn'>+</button>
+                        <div className='ccart'>
+                        <button onClick={handleAddToCartClick} className='add-to-cart'>Add to Cart</button>
+                        </div>
+                        
                     </div>
-                    <button onClick={handleAddToCartClick} className='add-to-cart'>Add to Cart</button>
                 </div>
                 <button className='view-details'>View Details</button>
             </div>

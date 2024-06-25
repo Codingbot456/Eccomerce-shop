@@ -81,17 +81,30 @@ h2 {
 }
 
 .clear-cart {
-    background-color: #ff4d4d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
     color: #fff;
+    background-color: red;
     border: none;
-    padding: 10px 20px;
+    width: 100%;
+    max-width: 170px;
+    height: 20px;
+    padding: 20px;
+    justify-self: center;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-size: 1.4em;
+    font-weight: bolder;
 }
 
 .clear-cart:hover {
-    background-color: #e60000;
+    background-color:black;
+    letter-spacing: .3px;
+    scale: 1.009;
+    transition: .3s ease;
 }
 
 .cart-item {

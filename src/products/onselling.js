@@ -45,13 +45,13 @@ const initialProducts = [
         id: 5,
         name: 'Hermes Carlton London',
         description: 'Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem',
-        price: 15.00,
+        price: 39.99,
         image_url: onSellImage5
     },{
         id: 6,
         name: 'Wayfarer Sunglasses',
         description: 'Our optical engineers developed these sunglasses for hiking. Ideal for occasional use in the mountains.',
-        price: 20.00,
+        price: 39.99,
         image_url:onSellImage6
     },{
         id: 7,
@@ -167,9 +167,13 @@ const CartBuy = ({ product, onClose, onAddToCart }) => {
         </div>
         <div className='cart-buy-abt2'>
         <div className='card-info'>
-                <h4>{product.name}</h4>
+            <div className='card-wrap'>
+            <h4>{product.name}</h4>
                         <p1>{product.description}</p1>
                         <h4>Price: ${product.price}</h4>
+
+            </div>
+            
                 </div>
             <div className='sizes'>
                 {['S', 'M', 'L', 'XL', 'XXL'].map(size => (
@@ -191,8 +195,11 @@ const CartBuy = ({ product, onClose, onAddToCart }) => {
                     <button onClick={handleDecrement} className='quantity-btn'>-</button>
                     <span className='quantity-value'>{quantity}</span>
                     <button onClick={handleIncrement} className='quantity-btn'>+</button>
+                    <div className='ccart'>
+                        <button onClick={handleAddToCartClick} className='add-to-cart'>Add to Cart</button>
+                        </div>
                 </div>
-                <button onClick={handleAddToCartClick} className='add-to-cart'>Add to Cart</button>
+               
             </div>
             <button className='view-details'>View Details</button>
         </div>
