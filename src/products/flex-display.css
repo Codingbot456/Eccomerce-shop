@@ -40,7 +40,7 @@
 .card-info3 {
     display: grid;
     place-content: center;
-    gap: 5px;
+    gap: 10px;
 }
 
 
@@ -82,7 +82,7 @@
         height: 150px;
     }
     .card-info3 {
-        width: 180px;
+        width: 100%;
     }
     .overlay .buy-card-main{
         display: grid;
