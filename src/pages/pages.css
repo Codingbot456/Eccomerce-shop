@@ -1,9 +1,9 @@
 .homepage{
-    margin-top: 30px;
+    margin-top: 70%;
 }
 .section {
-    padding:20px;
-    margin-bottom: 28px; /* Adjust this value to set the desired space between sections */
+    margin-top:40px;
+    padding:20px; /* Adjust this value to set the desired space between sections */
   }
 
 .hero-section {
@@ -111,10 +111,38 @@ height: 300px;
 .car{
    margin-top:30%;
 }
+.close-cart-btn {
+    display:grid;
+    place-content:center;
+    background-color: transparent;
+    color:black;
+    outline:2px solid black;
+    padding:10px;
+    font-weight:bold;
+    width:25px;
+    height:25px;
+    border-radius:50%;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.close-cart-btn:hover{
+    color:white;
+    background-color:black;
+    outline:none;
+    transition:.3s ease;
+    scale:1.009;
+
+}
+
 
 @media screen and (max-width: 768px) {
+ 
     .hero-section{
-        margin-top: 10%;
+        margin-top: 30%;
     }
     .brands {
         grid-template-columns: 1fr 1fr ;

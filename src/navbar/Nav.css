@@ -8,6 +8,7 @@
   position: fixed;
   width:100%;
   top:0;
+  cursor:pointer;
 }
 
 /* Logo styles */
@@ -45,7 +46,7 @@
 .nav-list a {
   color: black;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .nav-list a:hover {
@@ -78,6 +79,7 @@
   display: block;
   color: #333;
   text-decoration: none;
+  
 }
 
 .dropdown-item:hover {
@@ -124,6 +126,27 @@
   position:absolute;
   top:30px;
   font-size:12px;
+  animation: bounce2 0.4s ease-in-out 0.8s;
+}
+.cart-count:hover{
+  animation: bounce2 0.4s ease-in-out 0.8s;
+}
+
+@keyframes bounce2 {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+      opacity:0;
+  }
+  40% {
+      transform: translateY(-10px);
+  }
+  60% {
+      transform: translateY(-5px);
+      
+  }
+  100%{
+    opacity:1;
+  }
 }
 .shopping ,.message {
   i{
@@ -132,19 +155,47 @@
 }
 }
 
+
+
+
 /* Sidebar styles */
 .sidebar {
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
-  width: 250px;
-  background-color: #333;
-  color: #fff;
+  width: 300px;
+  background-color: white;
   padding-top: 3.5rem;
   z-index: 100000;
   overflow-y: auto;
+  animation: slideIn1 0.8s ease-out forwards, bounce1 0.8s ease-in-out 0.8s;
+  border-right:1px solid grey;
 }
+@keyframes slideIn1 {
+  0% {
+      transform: translateX(-100%) ;
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+/* Define keyframes for bounce effect */
+@keyframes bounce1 {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+  }
+  40% {
+      transform: translateY(-10px);
+  }
+  60% {
+      transform: translateY(-5px);
+  }
+}
+
 
 .nav-side ul {
   list-style: none;
@@ -156,7 +207,7 @@
 }
 
 .nav-side a {
-  color: #fff;
+  color: black;
   text-decoration: none;
   font-size: 1.2rem;
 }
@@ -168,9 +219,10 @@
 /* Sidebar dropdown menu styles */
 .nav-side .dropdown-menu {
   display: none;
+  justify-self:center;
   background-color: #444;
   padding: 0.5rem;
-  margin-left: 1rem;
+
 }
 
 .nav-side .dropdown-item {
@@ -195,7 +247,7 @@
   color:white;
   border-radius:50%;
   width:35px;
-  Height:35;
+  Height:35px;
   aspect-ratio:1;
   transition:.5s ease;
 
