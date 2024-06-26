@@ -255,4 +255,7 @@ font-weight: bolder;
 
 
 @media screen  and (max-width: 768px){
+    .cart{
+        width:100%;
+    }
 }
