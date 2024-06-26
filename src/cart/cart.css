@@ -225,8 +225,8 @@ font-weight: bolder;
 }
 
 .total-amount {
-    text-align: right;
-    margin-top: 20px;
+    text-align: left;
+    margin-top: 10px;
 }
 
 .checkout-link {
