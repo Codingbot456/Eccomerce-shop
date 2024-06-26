@@ -113,6 +113,9 @@ height: 300px;
 }
 
 @media screen and (max-width: 768px) {
+    .hero-section{
+        margin-top: 10%;
+    }
     .brands {
         grid-template-columns: 1fr 1fr ;
     }
