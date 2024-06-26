@@ -4,21 +4,16 @@ import { CartContext } from '../context/CartContext';
 import '../cart/cart.css';
 import '../productCategories/men.css';
 
-const Cart = ({ bgColor, scale, width, onClose }) => {
+const Cart = () => {
     const { cartItems, removeFromCart, clearCart, incrementQuantity, decrementQuantity } = useContext(CartContext);
 
     const totalAmount = cartItems.reduce((total, item) => total + item.totalPrice, 0);
 
-    const cartStyle = {
-        backgroundColor: bgColor,
-        width: width,
-        transition: 'width 0.3s',
-    };
+  
 
     return (
-        <div className="cart" style={cartStyle}>
+        <div className="cart">
             <div className="cart-header">
-                 <button className="close-cart " onClick={onClose}>×</button>
             <h2>Your Cart</h2>
             </div>
            

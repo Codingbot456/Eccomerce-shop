@@ -1,7 +1,5 @@
-
-.home-page{
-    margin-top: 10%;
-    
+.homepage{
+    margin-top: 30px;
 }
 .section {
     padding:20px;
@@ -115,9 +113,6 @@ height: 300px;
 }
 
 @media screen and (max-width: 768px) {
-    .hero-section{
-        margin-top: 18%;
-    }
     .brands {
         grid-template-columns: 1fr 1fr ;
     }
