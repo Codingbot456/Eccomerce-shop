@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
 import '../cart/cart.css';
 import '../productCategories/men.css';
+import emptyImage from '../components/assets/images/empty.png';
+
+
+
 
 const Cart = () => {
     const { cartItems, removeFromCart, clearCart, incrementQuantity, decrementQuantity } = useContext(CartContext);
@@ -45,10 +49,11 @@ const Cart = () => {
                                 </li>
                             ))
                         ) : (
-                            <>
+                            <div className='empty'>
                                 <li className="empty-cart">Your cart is empty</li>
-                                <img src="images/empty-cart.webp" alt="Image 1" />
-                            </>
+                                <img src={emptyImage} alt="Image 1" />
+
+                            </div>
                         )}
                     </ul>
                     {cartItems.length > 0 && (

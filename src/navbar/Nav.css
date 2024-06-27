@@ -18,9 +18,9 @@
  
 }
 
-.nav-logo p {
+.nav-logo p1 {
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.2srem;
   color: #aaa;
 }
 
@@ -46,12 +46,34 @@
 .nav-list a {
   color: black;
   text-decoration: none;
+  font-weight: 400;
   font-size: 1.2rem;
 }
 
-.nav-list a:hover {
-  text-decoration: underline;
+.nav-list a::before{
+  content: '';
+  background-color: red;
+  border-radius: 10px 0 0 10px;
+  position: absolute;
+  bottom:0;
+  display: block;
+  place-content: center;
+ height: 3px;
+ width:0;
+ scale:0;
+ transition: all 0.5s linear;
+ transform-origin:left;
+ opacity:0;
 }
+
+.nav-list a:hover::before { /* Corrected this line */
+  width: 60%;
+  scale: 1;
+  letter-spacing: .3px ease;
+  opacity:1;
+}
+
+
 
 /* Dropdown menu styles */
 .position-relative {
@@ -212,9 +234,31 @@
   font-size: 1.2rem;
 }
 
-.nav-side a:hover {
-  text-decoration: underline;
+
+.nav-side a::before{
+  content: '';
+  background-color: red;
+  border-radius: 10px 0 0 10px;
+  position: absolute;
+  bottom:0;
+  display: block;
+  place-content: center;
+ height: 3px;
+ width:0;
+ scale:0;
+ transition: all 0.5s linear;
+ transform-origin:left;
+ opacity:0;
 }
+
+.nav-side a:hover::before { /* Corrected this line */
+  width: 40%;
+  scale: 1;
+  opacity:1;
+  letter-spacing: .3px ease;
+}
+
+
 
 /* Sidebar dropdown menu styles */
 .nav-side .dropdown-menu {
@@ -285,6 +329,47 @@
 
 .bottom-nav i:hover, .bottom-nav a:hover {
   color: #ccc;
+}
+.main-logo{
+  display: flex;
+  cursor: pointer;
+  font-weight: bolder;
+}
+@keyframes dropLetters {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+}
+
+.logo-1, .logo-2, .logo-3, .logo-4, .logo-5
+{
+  display: inline-block;
+  margin: 0 5px;
+  font-size: 2em;
+}
+.logo-1 {
+  animation: dropLetters 1.5s  forwards;
+  display: inline-block;
+  margin: 0 5px;
+  font-size: 2em;
+}
+.logo-2{
+  animation: dropLetters 1.9s  forwards;
+}
+.logo-3{
+  animation: dropLetters 2.3s  forwards;
+}
+.logo-4{
+  animation: dropLetters 2.7s  forwards;
+}
+.logo-5{
+  animation: dropLetters 3s  forwards;
 }
 
 /* Responsive adjustments */

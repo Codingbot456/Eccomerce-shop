@@ -37,8 +37,14 @@ function Nav({ isCartVisible, setIsCartVisible }) {
     <nav className="main-nav">
       <div className='container-fluid d-flex justify-content-between align-items-center'>
         <div className='nav-logo p-3'>
-          <h5>Trend</h5>
-          <p>Wear</p>
+          <div className='main-logo'>
+          <h1 className='logo-1'>T</h1>
+          <h1 className='logo-2'>R</h1>
+          <h1 className='logo-3'>E</h1>
+          <h1 className='logo-4'>N</h1>
+          <h1 className='logo-5'>D</h1>
+          </div>
+          <p1>Wear</p1>
         </div>
         {!isSmallScreen && (
           <div className='nav-list d-inline-flex'>

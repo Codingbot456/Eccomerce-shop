@@ -227,6 +227,7 @@ font-weight: bolder;
 .total-amount {
     text-align: left;
     margin-top: 10px;
+    padding:5px;
 }
 
 .checkout-link {
@@ -252,6 +253,26 @@ font-weight: bolder;
     color:white;
 }
 
+.empty {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 20px;
+   animation:empty 3s ease infinite ;
+}
+@keyframes empty {
+    0% {
+
+        opacity: 0;
+        scale: 0;
+    }
+    100% {
+        opacity: 1;
+        scale:1;
+    }
+    
+}
 
 
 @media screen  and (max-width: 768px){
@@ -260,5 +281,6 @@ font-weight: bolder;
         display:grid;
         align-items:center;
         padding:3px;
+        overflow-y:scroll;
     }
 }
