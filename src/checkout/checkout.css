@@ -1,13 +1,14 @@
 .checkout-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 100%;
-  height: auto;
   position: absolute;
-  display: grid;
+  z-index: 4567890876543;
+  background-color: whitesmoke;
   top: 0;
-  z-index: 34567890876543456789087698765;
-  box-shadow: 0 0 10px #0000001a;
- background-color: whitesmoke;
-  padding: 40px;
+  padding: 10px;
   overflow-y: scroll;
 }
 

@@ -60,6 +60,7 @@ const CheckoutForm = () => {
 
   return (
     <div className="checkout-container">
+        <h2>Enter your Details</h2>
     <form onSubmit={handleSubmit}>
       {/* Customer Details Input Fields */}
       <div className='order-form'>
@@ -94,7 +95,7 @@ const CheckoutForm = () => {
       </div>
       {/* Items Input Fields */}
       <div className='order-form1'>
-      <h3>Items</h3>
+      <h3> Your Items:</h3>
       {formData.items.map((item, index) => (
         <div key={index} className="item-summary">
           <img src={item.image_url} alt={item.name} className="item-image" />
