@@ -48,6 +48,7 @@
   text-decoration: none;
   font-weight: 400;
   font-size: 1.2rem;
+  transition: .3s ease;
 }
 
 .nav-list a::before{
@@ -72,6 +73,9 @@
   letter-spacing: .3px ease;
   opacity:1;
 }
+.nav-list a:hover{
+  letter-spacing: 1px;
+ }
 
 
 
@@ -226,37 +230,42 @@
 
 .nav-side li {
   padding: 1rem 0;
+  font-weight: 500;
 }
 
 .nav-side a {
   color: black;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 
-.nav-side a::before{
+.nav-side a::after{
   content: '';
   background-color: red;
   border-radius: 10px 0 0 10px;
   position: absolute;
-  bottom:0;
-  display: block;
-  place-content: center;
+  display: grid;
+  place-content: left;
  height: 3px;
  width:0;
  scale:0;
  transition: all 0.5s linear;
  transform-origin:left;
  opacity:0;
+ overflow: hidden;
 }
 
-.nav-side a:hover::before { /* Corrected this line */
-  width: 40%;
+.nav-side a:hover::after { /* Corrected this line */
+  width: 50px;
   scale: 1;
   opacity:1;
-  letter-spacing: .3px ease;
+  
 }
+ .nav-side a:hover{
+  letter-spacing: 1px;
+  transition: .3s ease;
+ }
 
 
 

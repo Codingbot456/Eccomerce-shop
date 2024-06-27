@@ -121,7 +121,7 @@ function Nav({ isCartVisible, setIsCartVisible }) {
             <Link to="/shops" className="no-underline">Shops</Link>
           </li>
           <li className='p-3'>
-            <Link to="/signin" className="no-underline">Sign In</Link>
+            <Link to="/register" className="no-underline">Sign In</Link>
           </li>
         </ul>
       </div>

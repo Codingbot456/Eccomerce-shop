@@ -31,15 +31,18 @@
  
 }
 
-h2 {
+.reg-con h2 {
   margin-bottom: 1rem;
   color: #333;
+  text-align: center;
 }
 
 .login-container form {
   align-items: center;
+  text-align: left;
   display: grid;
   width: 100%;
+  gap:10px;
  height: 450px;
  overflow-y: scroll;
  
