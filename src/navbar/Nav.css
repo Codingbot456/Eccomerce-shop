@@ -41,7 +41,40 @@
   margin-right: 1rem;
   position: relative;
 }
+.sign-up-actions {
+  display: grid;
+  gap: 10px;
+}
 
+
+.sign-up .login{
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  text-align: center;
+  border:1px solid WHITE;
+  padding: 10px 20px;
+
+}
+.sign-up .login:hover{
+  color: white;
+  background-color: #555;
+  border: 1px solid black;
+}
+.sign-up .signin{
+  background-color: white;
+  color:black;
+  border:1px solid black;
+  border-radius: 20px;
+  text-align: center;
+  white-space: nowrap;
+  padding: 10px 20px;
+}
+.sign-up .signin:hover{
+  color: white;
+  background-color: red;
+ 
+}
 /* Link styles */
 .nav-list a {
   color: black;
@@ -139,7 +172,7 @@
 }
 
 .search-button:hover {
-  background-color: #666;
+  background-color: #555;
 }
 .cart-count{
   background-color:red;

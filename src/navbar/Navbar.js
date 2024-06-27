@@ -68,8 +68,16 @@ function Nav({ isCartVisible, setIsCartVisible }) {
               <li className='p-3'>
                 <Link to="/shops" className="no-underline">Shops</Link>
               </li>
-              <li className='p-3'>
-                <Link to="/signin" className="no-underline">Sign In</Link>
+
+
+              <li className=' sign-up p-3 position-relative'>
+                <Link to="#" className="no-underline">Sign In</Link>
+                <div className="dropdown-menu">
+                  <div className='sign-up-actions'>
+                <Link   to="/login" className=" signin no-underline">Login</Link>
+                <Link  to="/register" className=" login no-underline">Sign up</Link>
+                </div>
+                </div>
               </li>
             </ul>
             <div className='search-container p-3'>
@@ -119,9 +127,6 @@ function Nav({ isCartVisible, setIsCartVisible }) {
           </li>
           <li className='p-3'>
             <Link to="/shops" className="no-underline">Shops</Link>
-          </li>
-          <li className='p-3'>
-            <Link to="/register" className="no-underline">Sign In</Link>
           </li>
         </ul>
       </div>
