@@ -16,7 +16,7 @@ function HomePage() {
   
 
   return (
-    <>
+    
   
     <div className='home-page'>
       <div className="hero-section">
@@ -53,7 +53,7 @@ function HomePage() {
      <Footer/>
       
     </div>
-    </>
+    
   );
 }
 

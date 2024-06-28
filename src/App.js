@@ -24,8 +24,8 @@ function App() {
             <Route path="/products" element={<ProductPage />} />
             <Route path="/register" element={<Registration />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/checkout" element={<CheckoutPage />} />
           </Route>
+          <Route path="/checkout" element={<CheckoutPage />} />
         </Routes>
         {isCartVisible && <Cart />} {/* Conditionally render Cart */}
       </Router>
