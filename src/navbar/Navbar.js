@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../navbar/Nav.css';
 import { CartContext } from '../context/CartContext';
+import { FaRegMessage } from "react-icons/fa6";
+import { HiBars3BottomRight } from "react-icons/hi2";
 
 function Nav({ isCartVisible, setIsCartVisible }) {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
@@ -137,7 +139,7 @@ function Nav({ isCartVisible, setIsCartVisible }) {
     <div className="bottom-nav">
       <i className="fa fa-search"></i>
       <Link to="/" aria-label="Home">
-      <i className="fa fa-message" aria-hidden="true"></i>
+      <FaRegMessage />
       </Link>
       <Link to="/" aria-label="Home">
         <i className="fa fa-home" aria-hidden="true"></i>

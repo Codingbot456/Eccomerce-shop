@@ -1,26 +1,25 @@
 import React from 'react';
 import './footer.css';
+import { FaInstagram } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
+import { FaFacebookSquare } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+
+
 
 const Footer = () => {
   return (
     <div className='Main-footer'>
     <footer className="footer-container">
-      <div className="social">
-        <div>
-        <h4>Socials</h4>
-        <a href="https://www.instagram.com/">Instagram</a>
-        <a href="https://twitter.com/">Twitter</a>
-        <a href="https://www.facebook.com/">Facebook</a>
-        <a href="https://www.youtube.com/">YouTube</a>
-        </div>
-      </div>
+    
 
-      <div className="contact">
+      <div className="info"> 
         <div>
-        <h4>Contact us</h4>
-        <a href="#">Contact Us</a>
-        <a href="mailto:yourexample@email.com">ye@email</a>
-        <a href="mailto:example@email.com">example</a>
+        <h4>Our Information</h4>
+        <a href="#">Privacy Policy Update</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Return Policy</a>
+        <a href="#">Site Map</a>
         </div>
       </div>
 
@@ -34,13 +33,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="about">
-        <div>
-        <h4>About us</h4>
-        <a href="#">About Us</a>
-        <a href="#">Copyright</a>
-        </div>
-      </div>
+    
         
       <div className="customercare">
         <div>
@@ -51,13 +44,33 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="info"> 
+      <div className="about">
         <div>
-        <h4>Our Information</h4>
-        <a href="#">Privacy Policy Update</a>
-        <a href="#">Terms & Conditions</a>
-        <a href="#">Return Policy</a>
-        <a href="#">Site Map</a>
+        <h4>About us</h4>
+        <a href="#">About Us</a>
+        <a href="#">Copyright</a>
+        </div>
+      </div>
+
+      <div className="contact">
+        <div>
+        <h4>Contact us</h4>
+        <a href="#">Contact Us</a>
+        <a href="mailto:yourexample@email.com">ye@email</a>
+        <a href="mailto:example@email.com">example</a>
+        </div>
+      </div>
+
+
+      <div className="social">
+        <div >
+        <h4>Socials</h4>
+      
+        <a href="https://www.instagram.com/"> <FaInstagram /> Instagram</a>
+        <a href="https://twitter.com/"> <FaSquareXTwitter /> Twitter</a>
+        <a href="https://www.facebook.com/"> <FaFacebookSquare />Facebook</a>
+        <a href="https://www.youtube.com/"> <FaYoutube /> YouTube</a>
+
         </div>
       </div>
     </footer>
