@@ -9,28 +9,25 @@ import Login from './Registering/login';
 import CheckoutPage from './checkout/checkout';
 import Nav from './navbar/Navbar';
 
+
+
 function App() {
-  const [isCartVisible, setIsCartVisible] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [isCartVisible, setIsCartVisible] = useState(false); // State to manage cart visibility
 
   return (
     <CartProvider>
       <Router>
-        <Nav 
-          isCartVisible={isCartVisible} 
-          setIsCartVisible={setIsCartVisible}
-          setSearchQuery={setSearchQuery}
-        />
+        <Nav isCartVisible={isCartVisible} setIsCartVisible={setIsCartVisible} /> {/* Pass props to Nav */}
         <Routes>
           <Route element={<Outlet />}>
-            <Route path="/" element={<HomePage searchQuery={searchQuery} />} />
+            <Route path="/" element={<HomePage />} />
             <Route path="/products" element={<ProductPage />} />
             <Route path="/register" element={<Registration />} />
             <Route path="/login" element={<Login />} />
             <Route path="/checkout" element={<CheckoutPage />} />
           </Route>
         </Routes>
-        {isCartVisible && <Cart />} 
+        {isCartVisible && <Cart />} {/* Conditionally render Cart */}
       </Router>
     </CartProvider>
   );
