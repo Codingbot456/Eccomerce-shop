@@ -1,0 +1,14 @@
+.main-filter{
+    text-decoration: none;
+    color: black;
+    display: grid;
+    gap: 4px;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+   
+}
+.main-filter select{
+    outline: none;
+    padding: 5px;
+}

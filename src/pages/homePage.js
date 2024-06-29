@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Carousel from '../slide/slider';
-import Filter from '../filters/filter';
-import Sort from '../filters/Sort';
 import Brand from '../home/brand';
 import Footer from '../home/footer';
 import SellingProducts from '../products/onselling';
