@@ -70,7 +70,7 @@ const initialProducts = [
         name: 'Wayfarer Sunglasses',
         description: 'Our optical engineers developed these sunglasses for hiking. Ideal for occasional use in the mountains.',
         price: 39.99,
-        image_url:onSellImage6,
+        image_url: onSellImage6,
         category: 'Sunglass',
         brand: 'Wayfarer',
         color: 'Gray'
@@ -80,7 +80,7 @@ const initialProducts = [
         name: 'Armani Wide-Leg Trousers',
         description: 'Monochrome elegance. Made with a relaxed wide-leg, these trousers are made from a sustainable soft organic cotton with a mechanical stretch making the garment easily recycled.',
         price: 60.00,
-        image_url:onSellImage7,
+        image_url: onSellImage7,
         category: 'Man',
         brand: 'Armani',
         color: 'Brown'
@@ -90,7 +90,7 @@ const initialProducts = [
         name: 'REDQ Steel Watch',
         description: 'The Black Bay celebrates 60 years of diving watches with extraordinary heritage. The iconic model inherits the general lines.',
         price: 80.00,
-        image_url:onSellImage8,
+        image_url: onSellImage8,
         category: 'Watch',
         brand: 'REDQ',
         color: 'Black'
@@ -140,20 +140,24 @@ function SellingProducts({ filters = {} }) {
         return true;
     };
 
-    const filteredProducts = products.filter(applyFilters);
+    const filteredProducts = Array.isArray(products) ? products.filter(applyFilters) : [];
 
     return (
         <div className={`home-prods3 ${selectedProduct ? 'dimmed' : ''}`}>
             <h2>On-Selling Clothes</h2>
             <div className="item-content3">
-                {filteredProducts && filteredProducts.length && filteredProducts.map((product, index) => (
-                    <ProductCard
-                        key={index}
-                        product={product}
-                        addToCart={addToCart}
-                        setSelectedProduct={setSelectedProduct}
-                    />
-                ))}
+                {filteredProducts.length > 0 ? (
+                    filteredProducts.map((product, index) => (
+                        <ProductCard
+                            key={index}
+                            product={product}
+                            addToCart={addToCart}
+                            setSelectedProduct={setSelectedProduct}
+                        />
+                    ))
+                ) : (
+                    <p>No products available.</p>
+                )}
             </div>
             {selectedProduct && (
                 <div className="overlay">

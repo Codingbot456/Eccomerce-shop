@@ -129,26 +129,30 @@ function FeaturedProducts({ filters = {} }) {
             if (price === '$200 to $300' && (priceValue < 200 || priceValue > 300)) return false;
             if (price === '$300 to $500' && (priceValue < 300 || priceValue > 500)) return false;
             if (price === '$500 to $1000' && (priceValue < 500 || priceValue > 1000)) return false;
-            if (price === 'Over $1000' && priceValue <= 1000) return false;
+            if (price === 'Over $1000' && priceValue <= 1000) return "no products available";
         }
 
         return true;
     };
 
-    const filteredProducts = products.filter(applyFilters);
+    const filteredProducts = Array.isArray(products) ? products.filter(applyFilters) : []; // Check if products is an array
 
     return (
         <div className={`home-prods4 ${selectedProduct ? 'dimmed' : ''}`}>
-            <h2>New-Arrival Clothes</h2>
+            <h2>Our Featured Clothes</h2>
             <div className="item-content4">
-                {filteredProducts && filteredProducts.length && filteredProducts.map((product, index) => (
-                    <ProductCard
-                        key={index}
-                        product={product}
-                        addToCart={addToCart}
-                        setSelectedProduct={setSelectedProduct}
-                    />
-                ))}
+                {filteredProducts.length > 0 ? ( // Check if there are any filtered products
+                    filteredProducts.map((product, index) => (
+                        <ProductCard
+                            key={index}
+                            product={product}
+                            addToCart={addToCart}
+                            setSelectedProduct={setSelectedProduct}
+                        />
+                    ))
+                ) : (
+                    <p>No products available.</p> // Fallback message if no products are available
+                )}
             </div>
             {selectedProduct && (
                 <div className="overlay">
