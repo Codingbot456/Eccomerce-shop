@@ -62,13 +62,13 @@ function Nav({ isCartVisible, setIsCartVisible }) {
                 </div>
               </li>
               <li className='p-3'>
-                <Link to="/womenwear" className="no-underline">Womenwear</Link>
+                <Link to="/trends" className="no-underline">Trends</Link>
               </li>
               <li className='p-3'>
                 <Link to="/all" className="no-underline">All</Link>
               </li>
               <li className='p-3'>
-                <Link to="/pages" className="no-underline">Pages</Link>
+                <Link to="/prods" className="no-underline">Pages</Link>
               </li>
               <li className='p-3'>
                 <Link to="/shops" className="no-underline">Shops</Link>

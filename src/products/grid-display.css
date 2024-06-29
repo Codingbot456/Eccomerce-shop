@@ -92,6 +92,13 @@
     flex-direction: column;
 
 }
+.search-input{
+    max-width: 350px;
+    width: 100%;
+    outline: none;
+    border-radius: 30px;
+}
+
 
 
 @media (max-width: 768px) {
@@ -163,6 +170,15 @@
     .view-details{
         width: 100%;
         background-color: red;
+    }
+    .search-input{
+        padding:20px;
+        width: 100%;
+        outline: none;
+        border-radius: 30px;
+    }
+    .item-content4{
+        margin-top: 30px;
     }
 
 

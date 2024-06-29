@@ -4,11 +4,12 @@ import CartBuy from '../components/products/CartBuy-grid';
 import ProductCard from '../components/products/ProductCard-grid';
 import '../products/grid-display.css';
 
-import onSellImage from '../components/assets/images/feature-1.webp';
-import onSellImage1 from '../components/assets/images/feature-2.webp';
-import onSellImage2 from '../components/assets/images/feature-3.webp';
-import onSellImage3 from '../components/assets/images/feature-4.webp';
-import onSellImage4 from '../components/assets/images/feature-5.webp';
+import featured from '../components/assets/images/feature-1.webp';
+import featured1 from '../components/assets/images/feature-2.webp';
+import  featured2 from '../components/assets/images/feature-3.webp';
+import featured3 from '../components/assets/images/feature-4.webp';
+import featured4 from '../components/assets/images/feature-5.webp';
+
 
 const initialProducts = [
     {
@@ -16,42 +17,32 @@ const initialProducts = [
         name: 'Nike Bag',
         description: 'Rolex’s powerhouse calibre 3235 Perpetual movement. An upgrade from the calibre 3135 movement',
         price: 16.38,
-        image_url: onSellImage,
-        category: 'Bags',
-        brand: 'Nike',
-        color: 'Black'
+        image_url: featured
     },
     {
         id: 2,
         name: 'Adidas Woolen Cap',
         description: 'Casual wear (casual attire or clothing) may be a Western code that’s relaxed, occasional, spontaneous and fitted to everyday use. Casual wear became popular within the Western world following the counterculture of the 1960s.',
         price: 16.00,
-        image_url: onSellImage1,
-        category: 'Hats',
-        brand: 'Adidas',
-        color: 'Black'
+        image_url: featured1
     },
     {
         id: 3,
         name: 'Nike Leader VT',
         description: 'Footwear refers to garments worn on the feet, which originally serves to purpose of protection against adversities of the environment, usually regarding ground textures and temperature.',
         price: 16.38,
-        image_url: onSellImage2,
-        category: 'Shoes',
-        brand: 'Nike',
-        color: 'White'
+        image_url: featured2
     },
     {
         id: 4,
         name: 'Tissot Classic',
         description: 'The new-model Submariner now features Rolex’s powerhouse calibre 3235 Perpetual movement. An upgrade from the calibre 3135 movement,',
         price: 600.00,
-        image_url: onSellImage4,
-        category: 'Watches',
-        brand: 'Tissot',
-        color: 'Silver'
+        image_url: featured3
     }
 ];
+
+
 
 function FeaturedProducts({ filters = {} }) {
     const [products] = useState(initialProducts);

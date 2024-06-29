@@ -20,6 +20,7 @@
     background-color: #f0f0f0;
     position: sticky;
     top: 40px;
+    max-width: 350px;
   }
 
   .filters h5{
@@ -70,6 +71,7 @@
   .all-items{
     margin-top: 8%;
   }
+
   
   @media (max-width: 768px) {
     .all {
