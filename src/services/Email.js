@@ -28,12 +28,16 @@ export const ContactUs = () => {
       return;
     }
 
+    console.log('Service ID:', process.env.REACT_APP_SERVICE_ID); // Ensure this logs the correct value
+    console.log('Template ID:', process.env.REACT_APP_TEMPLATE_ID); // Ensure this logs the correct value
+    console.log('Public Key:', process.env.REACT_APP_PUBLIC_KEY); // Ensure this logs the correct value
+
     emailjs
       .sendForm(
         process.env.REACT_APP_SERVICE_ID,
         process.env.REACT_APP_TEMPLATE_ID,
         form.current,
-        process.env.REACT_APP_PUBLIC_ID
+        process.env.REACT_APP_PUBLIC_KEY
       )
       .then(
         () => {
