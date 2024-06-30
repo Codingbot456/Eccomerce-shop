@@ -27,11 +27,6 @@ export const ContactUs = () => {
       setMessage('Please enter a valid email address.');
       return;
     }
-
-    console.log('Service ID:', process.env.REACT_APP_SERVICE_ID); // Ensure this logs the correct value
-    console.log('Template ID:', process.env.REACT_APP_TEMPLATE_ID); // Ensure this logs the correct value
-    console.log('Public Key:', process.env.REACT_APP_PUBLIC_ID); // Ensure this logs the correct value
-
     emailjs
       .sendForm(
         process.env.REACT_APP_SERVICE_ID,
