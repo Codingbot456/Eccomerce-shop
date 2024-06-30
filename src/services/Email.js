@@ -30,7 +30,7 @@ export const ContactUs = () => {
 
     console.log('Service ID:', process.env.REACT_APP_SERVICE_ID); // Ensure this logs the correct value
     console.log('Template ID:', process.env.REACT_APP_TEMPLATE_ID); // Ensure this logs the correct value
-    console.log('Public Key:', process.env.REACT_APP_PUBLIC_KEY); // Ensure this logs the correct value
+    console.log('Public Key:', process.env.REACT_APP_PUBLIC_ID); // Ensure this logs the correct value
 
     emailjs
       .sendForm(
