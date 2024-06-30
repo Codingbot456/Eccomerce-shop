@@ -5,21 +5,14 @@ import '../services/services.css';
 export const ContactUs = () => {
   const form = useRef();
   const [message, setMessage] = useState('');
-  const [authenticated, setAuthenticated] = useState(false);
 
-  const authenticateUser = () => {
-    // Replace this with your actual authentication logic
-    // For demonstration, we'll just set it to true
-    setAuthenticated(true);
+  const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
   };
 
   const sendEmail = (e) => {
     e.preventDefault();
-
-    if (!authenticated) {
-      setMessage('Please authenticate before sending the message.');
-      return;
-    }
 
     const userName = form.current.user_name.value.trim();
     const userEmail = form.current.user_email.value.trim();
@@ -30,12 +23,17 @@ export const ContactUs = () => {
       return;
     }
 
+    if (!validateEmail(userEmail)) {
+      setMessage('Please enter a valid email address.');
+      return;
+    }
+
     emailjs
       .sendForm(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID,
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
         form.current,
-        process.env.REACT_APP_EMAILJS_USER_ID
+        process.env.REACT_APP_PUBLIC_KEY
       )
       .then(
         () => {
@@ -50,7 +48,6 @@ export const ContactUs = () => {
 
   return (
     <div className='contacts'>
-      <button onClick={authenticateUser}>Authenticate</button>
       <form ref={form} onSubmit={sendEmail}>
         <label>Name</label>
         <input type="text" name="user_name" />
