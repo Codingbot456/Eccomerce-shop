@@ -10,6 +10,7 @@ import CheckoutPage from './checkout/checkout';
 import Nav from './navbar/Navbar';
 import { All } from './pages/All';
 import NewTrends from './pages/Trends';
+import { ContactUs } from './services/Email';
 
 
 
@@ -28,6 +29,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path='all' element={<All />} />
             <Route path='/trends' element={<NewTrends/>} />
+            <Route path="/contacts" element={<ContactUs />} />
           </Route>
           <Route path="/checkout" element={<CheckoutPage />} />
         </Routes>

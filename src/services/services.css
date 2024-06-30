@@ -1,0 +1,92 @@
+/* services.css */
+.contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 13.5%;
+  }
+  
+  .contacts form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .contacts label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .contacts input[type="text"],
+  .contacts input[type="email"],
+  .contacts textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  
+  .contacts input[type="text"]:focus,
+  .contacts input[type="email"]:focus,
+  .contacts textarea:focus {
+    border-color: blue;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+  }
+  
+  .contacts input[type="submit"] {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contacts input[type="submit"]:hover {
+    background-color: darkred;
+  }
+  
+  .contacts p {
+    margin-top: 20px;
+    color: green;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 600px) {
+    .contacts {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+      padding: 15px;
+      margin-top: 50%;
+      margin-left:10px;
+      margin-right: 10px;
+
+    }
+    
+  
+    .contacts input[type="text"],
+    .contacts input[type="email"],
+    .contacts textarea {
+      padding: 8px;
+      font-size: 0.9em;
+    }
+  
+    .contacts input[type="submit"] {
+      padding: 8px;
+      font-size: 0.9em;
+    }
+  }
+  

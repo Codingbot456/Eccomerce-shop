@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../navbar/Nav.css';
 import { CartContext } from '../context/CartContext';
 import { FaRegMessage } from "react-icons/fa6";
-import { HiBars3BottomRight } from "react-icons/hi2";
+import { HiBarsBottomRight } from "react-icons/hi2";
 
 function Nav({ isCartVisible, setIsCartVisible }) {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
@@ -74,7 +74,7 @@ function Nav({ isCartVisible, setIsCartVisible }) {
                 <Link to="/shops" className="no-underline">Shops</Link>
               </li>
 
-
+    
               <li className=' sign-up p-3 position-relative'>
                 <Link to="#" className="no-underline">Sign In</Link>
                 <div className="dropdown-menu">
@@ -84,21 +84,23 @@ function Nav({ isCartVisible, setIsCartVisible }) {
                 </div>
                 </div>
               </li>
+
+              
             </ul>
             <div className='search-container p-3'>
               <input type="text" placeholder="Search..." className="search-input"/>
               <button className="search-button"><i className="fas fa-search"></i></button>
-            </div>
-            <div className='message p-3'>
-            <i className="fa fa-message" >
-
-      </i>
             </div>
             <div className=' shopping p-3'>
             <i className="fa fa-shopping-basket" onClick={toggleCart}>
         {cartItemCount > 0 && <span className="cart-count">{cartItemCount}</span>}
       </i>
             </div>
+            <div>
+              <Link to="/contacts"  className="message" aria-label="Home">
+      <FaRegMessage />
+      </Link>
+              </div>
           </div>
         )}
         {isSmallScreen && (
@@ -128,6 +130,9 @@ function Nav({ isCartVisible, setIsCartVisible }) {
             <Link to="/womenwear" className="no-underline">Womenwear</Link>
           </li>
           <li className='p-3'>
+                <Link to="/trends" className="no-underline">Trends</Link>
+              </li>
+          <li className='p-3'>
             <Link to="/all" className="no-underline">All</Link>
           </li>
           <li className='p-3'>
@@ -138,13 +143,13 @@ function Nav({ isCartVisible, setIsCartVisible }) {
           </li>
         </ul>
       </div>
-    </div>
+    </div>       
   );
 
   const BottomNav = () => (
     <div className="bottom-nav">
       <i className="fa fa-search"></i>
-      <Link to="/" aria-label="Home">
+      <Link to="/contacts" aria-label="Home">
       <FaRegMessage />
       </Link>
       <Link to="/" aria-label="Home">
